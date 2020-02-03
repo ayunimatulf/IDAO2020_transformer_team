@@ -28,7 +28,7 @@
    - Models
      - same as above but not used normalization
    - Result:
-     - Have same value smape as above
+     - Have same value smape as above<br>
         ![alt text](pict/3a_IDAO2020_smape.png) 
 5. <b>4a_IDAO2020.ipynb</b>
     - Models
@@ -36,7 +36,7 @@
     - Note
       - sat_id not used to predict
     - Reuslt
-      - Sampe from prediction to real is little bit smaller than before
+      - Sampe from prediction to real is little bit smaller than before<br>
         ![alt text](pict/4a_IDAO2020_smape.png) 
 6. <b>5_IDAO2020.ipynb</b>
     - Models 
@@ -52,7 +52,7 @@
       - Using neural network and predict each label by the simulation and sat id (predict x by used sat_id and x_sim, y by used sat_id and y_sim, and also same for z)
       - Predict x,y,z as a vector 1x3 use x_sim, y_sim, z_sim
     - Result
-      - Has result better than previous strategy
+      - Has result better than previous strategy<br>
         ![alt text](pict/5a_IDAO2020_smape.png) 
 8. <b>6_IDAO2020.ipynb</b>
     - Models 
@@ -61,7 +61,7 @@
     - Note:
         - Not used sat_id as predictor
     - Result
-      - Has result quite bad compare to Linear Regression
+      - Has result quite bad compare to Linear Regression<br>
         ![alt text](pict/6_IDAO2020_smape.png) 
 9.  <b>7_IDAO2020..ipynb</b>
     - Models :
