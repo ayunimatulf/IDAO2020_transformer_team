@@ -68,7 +68,12 @@
       - Using Neural network to predict each label
       - To choose the predictor by find correlation each label (used label that has high correlation altough it sampled) with the target using this dictonary :
        ```python
-        {'x':['sat_id', 'x_sim', 'y_sim', 'Vz_sim'], 'y':['sat_id','x_sim','y_sim','Vx_sim'], 'z':['sat_id','y_sim','z_sim','Vy_sim']}
+        {'x':['x_sim', 'z_sim', 'Vy_sim'],
+         'y': ['x_sim', 'y_sim', 'Vz_sim'],
+         'z': ['sat_id', 'x_sim', 'z_sim', 'Vy_sim', 'Vz_sim'],
+         'Vx': ['y_sim', 'Vx_sim', 'Vz_sim'],
+         'Vy': ['z_sim', 'Vx_sim', 'Vy_sim', 'Vz_sim'],
+         'Vz': ['y_sim', 'z_sim', 'Vy_sim', 'Vz_sim']}
         ```
         mean to predict x will be used sat_id, x_sim, y_sim, and Vz_sim. To see the correlation number vam see in [cek_correlation.ipynb](https://github.com/ayunimatulf/IDAO2020/blob/master/cek_correlation.ipynb)
 10. <b>cek_correlation.ipynb</b>
