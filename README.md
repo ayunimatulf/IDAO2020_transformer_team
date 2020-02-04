@@ -81,8 +81,9 @@ TO DO :
 - [x] ~~Add detail each jupyter file in description~~
 - [ ] Tuning parameters
   - [ ] Tunning number of epoch:
-  - for epoch : 50 improvement 21% 0.184 vs 0.143
-  - [ ] Get target 0.15 if possible
+  - for epoch : 50 improvement 21% 0.184 vs 0.143 
+  - try for epoch 100 add callbacks just make it final :)
+  - [x] ~~Get target 0.15 if possible~~ (I got you)
 - [ ] Create submission
   - [ ] Score for tes.csv
   - [ ] Save the model
