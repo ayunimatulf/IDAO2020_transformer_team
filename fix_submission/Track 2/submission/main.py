@@ -2,7 +2,7 @@ import pandas as pd
 from tensorflow.keras import models
 import time
 
-
+toc=time.time()
 #data stats for normalization
 df_stats=pd.read_csv('train_stats.csv', index_col=0)
 df_stats=df_stats.drop('sat_id')
@@ -18,7 +18,7 @@ list_variable={'x':['x_sim', 'z_sim', 'Vy_sim'],
 #normalization
 def norm(x):
     return (x - df_stats['mean']) / df_stats['std']
-test = pd.read_csv("/Users/bytedance-it138302/Documents/IDAO2020/test_2.csv")
+test = pd.read_csv("/Users/bytedance-it138302/Documents/IDAO2020/fix_submission/Track 1/test.csv")
 # just sending simulated values as the answer
 submission = test[["id", "x_sim", "y_sim", "z_sim", "Vx_sim", "Vy_sim", "Vz_sim"]]
 submission=submission.set_index('id')
@@ -27,4 +27,6 @@ for i in list_variable:
     model=models.load_model('model/8_model_'+i+'.h5')
     submission[i]=model.predict(normed_data[list_variable[i]].values)
 submission = submission[["x", "y", "z", "Vx", "Vy", "Vz"]]
-submission.to_csv("submission.csv", index=True)
+submission.to_csv("/Users/bytedance-it138302/Documents/IDAO2020/fix_submission/Track 1/submission.csv", index=True)
+tic=time.time()
+print(tic-toc, ' s')
